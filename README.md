@@ -1,6 +1,6 @@
-# CampusFix — Decentralized Campus Maintenance DApp
+# Apartment Maintenance 
 
-CampusFix lets campus users submit maintenance issues to an Ethereum-compatible blockchain and transparently track status updates. The contract owner (administrator) can move requests between **Open**, **In Progress**, and **Resolved**.
+This lets users submit maintenance issues to an Ethereum-compatible blockchain and transparently track status updates. The contract owner (administrator) can move requests between **Open**, **In Progress**, and **Resolved**.
 
 ## Features
 - Solidity smart contract with input validation and sequential request IDs.
@@ -11,13 +11,13 @@ CampusFix lets campus users submit maintenance issues to an Ethereum-compatible 
 - Events for request creation and status changes.
 
 ## Project files
-- `CampusFix.sol` — smart contract.
+- `AparMain.sol` — smart contract.
 - `index.html`, `style.css`, `app.js` — browser interface.
 - `SUBMISSION_REPORT.md` — report template and test checklist.
 - `screenshots/README.md` — evidence screenshot checklist.
 
 ## Deploy and run
-1. Open [Remix](https://remix.ethereum.org/) and create `CampusFix.sol`.
+1. Open [Remix](https://remix.ethereum.org/) and create `AParMain.sol`.
 2. Paste the contract source, select Solidity compiler version **0.8.20 or compatible 0.8.x**, and compile.
 3. Deploy using Remix VM for local testing, or connect MetaMask to the instructor-approved test network. Keep the deploying wallet as the contract owner for administrator controls.
 4. Copy the deployed contract address.
@@ -33,7 +33,7 @@ These screenshots show the current deployed application and wallet/deployment se
 
 ### Running frontend and on-chain request history
 
-![CampusFix frontend showing a connected Sepolia wallet and an on-chain request](screenshots/campusfix-frontend.png)
+![CampusFix frontend showing a connected Sepolia wallet and an on-chain request](screenshots/frontend.png)
 
 ### Contract deployed on Sepolia
 
@@ -71,7 +71,7 @@ Do not use mock or fabricated evidence. Never include a seed phrase, private key
 Record observed results and attach real screenshots in the report. Do not claim a test passed until you have run it. Never commit wallet seed phrases, private keys, or other secrets. Request descriptions are public on-chain; do not submit personal or confidential information.
 
 
-![Smart contract compilation](screenshots/CampusFix_Blockchain_Workflow_Infographic.png)
+![Smart contract compilation](screenshots/Infographic.png)
 
 
 
