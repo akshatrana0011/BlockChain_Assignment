@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CampusFix decentralized campus maintenance request tracker">
+  <title>CampusFix — Campus Maintenance</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+  <script defer src="app.js?v=5"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">CF</span><span>CampusFix</span></a>
+    <button id="connectButton" class="button button-light">Connect MetaMask</button>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">CAMPUS SERVICES · ON-CHAIN TRACKING</div>
+      <h1>A better campus<br><span>starts with a fix.</span></h1>
+      <p>Report maintenance issues and follow their progress transparently.</p>
+      <div class="hero-meta"><span class="live-dot"></span><span id="networkLabel">Wallet not connected</span><span class="meta-divider">·</span><span id="accountLabel">No account</span></div>
+    </section>
+    <section class="stats" aria-label="Request summary">
+      <article class="stat-card"><span>Total requests</span><strong id="totalCount">—</strong></article>
+      <article class="stat-card"><span>Open</span><strong id="openCount">—</strong></article>
+      <article class="stat-card"><span>In progress</span><strong id="progressCount">—</strong></article>
+      <article class="stat-card"><span>Resolved</span><strong id="resolvedCount">—</strong></article>
+    </section>
+    <section class="content-grid">
+      <section class="panel form-panel">
+        <div class="section-kicker">NEW REPORT</div><h2>Report an issue</h2>
+        <p class="muted">Give the campus team enough detail to understand the problem.</p>
+        <form id="requestForm">
+          <label for="requestTitle">Issue title <span>Required</span></label>
+          <input id="requestTitle" maxlength="80" placeholder="e.g. Water leak in Block B" required>
+          <div class="field-note"><span>Keep it short and specific</span><span id="titleLength">0 / 80</span></div>
+          <label for="requestDescription">Description <span>Required</span></label>
+          <textarea id="requestDescription" rows="5" maxlength="500" placeholder="Where is it? What happened? Any useful details?" required></textarea>
+          <div class="field-note"><span>Do not include personal or sensitive information</span><span id="descriptionLength">0 / 500</span></div>
+          <button id="submitButton" class="button button-primary button-wide" type="submit">Submit request <span aria-hidden="true">↗</span></button>
+        </form>
+        <div id="formMessage" class="message" role="status" aria-live="polite"></div>
+      </section>
+      <section class="panel list-panel">
+        <div class="list-heading"><div><div class="section-kicker">TRANSPARENT BY DESIGN</div><h2>Request history</h2></div><button id="refreshButton" class="button button-outline" type="button">Refresh ↻</button></div>
+        <div class="filters">
+          <label class="sr-only" for="statusFilter">Filter by status</label>
+          <select id="statusFilter"><option value="all">All statuses</option><option value="0">Open</option><option value="1">In progress</option><option value="2">Resolved</option></select>
+          <span id="requestCountLabel" class="muted small">Connect wallet to load requests</span>
+        </div>
+        <div id="requestList" class="request-list"><div class="empty-state"><div class="empty-icon">⌁</div><h3>Your campus, improved</h3><p>Connect MetaMask to load on-chain requests or submit the first report.</p></div></div>
+      </section>
+    </section>
+    <footer><span>CampusFix DApp</span><span>Built on Ethereum · Transparent campus maintenance</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
