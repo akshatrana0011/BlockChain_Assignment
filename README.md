@@ -33,15 +33,15 @@ These screenshots show the current deployed application and wallet/deployment se
 
 ### Running frontend and on-chain request history
 
-![CampusFix frontend showing a connected Sepolia wallet and an on-chain request](screenshots/frontend.png)
+![AparMain frontend showing a connected Sepolia wallet and an on-chain request](screenshots/AparMain_Workflow_dashboard.png)
 
 ### Contract deployed on Sepolia
 
-![CampusFix contract deployed in Remix with Sepolia selected](screenshots/contract-deployed.png)
+![CampusFix contract deployed in Remix with Sepolia selected](screenshots/AparMain_Workflow_dashboard.png)
 
 ### Wallet connected in Remix
 
-![Remix connected through WalletConnect to the Sepolia wallet](screenshots/metamask-connected.png)
+![Remix connected through WalletConnect to the Sepolia wallet](screenshots/AparMain_Workflow_dashboard.png)
 
 ### Additional required test evidence
 
